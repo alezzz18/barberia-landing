@@ -151,23 +151,39 @@
 
     <!-- Horario -->
     <section class="section" id="horario">
-      <div class="container schedule">
-        <div class="reveal">
-          <header class="section-head">
-            <p class="kicker">Horario</p>
-            <h2>Cuándo encontrarnos</h2>
-          </header>
-          <table class="hours" id="hoursTable">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker">Horario</p>
+          <h2>Cuándo encontrarnos</h2>
+        </header>
+        <div class="schedule">
+          <table class="hours reveal" id="hoursTable">
             <caption class="sr-only">Horario de atención</caption>
             <tbody></tbody>
           </table>
+          <aside class="location reveal" aria-labelledby="location-title">
+            <div class="map" aria-hidden="true">
+              <span class="map-road map-road-h"></span>
+              <span class="map-road map-road-v"></span>
+              <span class="map-block b1"></span><span class="map-block b2"></span>
+              <span class="map-block b3"></span><span class="map-block b4"></span>
+              <span class="map-pin"><svg class="icon"><use href="#i-razor"/></svg></span>
+            </div>
+            <div class="location-body">
+              <h3 id="location-title"><svg class="icon"><use href="#i-pin"/></svg> Ubicación</h3>
+              <p class="address">Av. Principal, Local 12 · Ciudad de ejemplo</p>
+              <ul class="location-info">
+                <li><svg class="icon"><use href="#i-check"/></svg> Estacionamiento a una cuadra</li>
+                <li><svg class="icon"><use href="#i-check"/></svg> Efectivo, tarjeta y pago móvil</li>
+                <li><svg class="icon"><use href="#i-check"/></svg> Sin cita: según disponibilidad</li>
+              </ul>
+              <a href="#reservar" class="btn btn-outline btn-sm">
+                <svg class="icon"><use href="#i-calendar"/></svg> Mejor reserva tu hora
+              </a>
+              <p class="note">Dirección y datos ficticios para esta demo.</p>
+            </div>
+          </aside>
         </div>
-        <aside class="location reveal">
-          <svg class="icon"><use href="#i-pin"/></svg>
-          <h3>Ubicación</h3>
-          <p>Av. Principal, Local 12<br>Ciudad de ejemplo</p>
-          <p class="note">Dirección ficticia para esta demo.</p>
-        </aside>
       </div>
     </section>
 
@@ -199,6 +215,7 @@
           <div class="field">
             <label for="barber">Barbero</label>
             <select id="barber" name="barber"></select>
+            <p class="error" data-for="barber"></p>
           </div>
           <div class="field">
             <label for="date">Fecha</label>
