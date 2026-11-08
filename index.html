@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navaja Barber Club · Barbería (demo)</title>
+  <meta name="description" content="Landing page de demostración para una barbería ficticia: servicios, equipo, horario y reservas en línea. Proyecto de portafolio de Alejandro Gutiérrez.">
+  <meta name="theme-color" content="#0F0E0C">
+  <meta name="robots" content="noindex">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Navaja Barber Club · Barbería (demo)">
+  <meta property="og:description" content="Landing page de demostración con reservas en línea. Negocio ficticio.">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <div class="demo-banner" role="note">
+    <span>Demo · <strong>negocio ficticio</strong> · por <a href="https://alezzz18.github.io" target="_blank" rel="noopener">Alejandro Gutiérrez</a></span>
+  </div>
+
+  <!-- Iconos -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-razor" viewBox="0 0 24 24"><path d="M3 17 14.5 5.5a2.1 2.1 0 0 1 3 3L6 20H3Z"/><path d="m13 7 4 4"/></symbol>
+    <symbol id="i-scissors" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88M14.47 14.48 20 20M8.12 8.12 12 12"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-coffee" viewBox="0 0 24 24"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><path d="M6 2v2M10 2v2M14 2v2"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></symbol>
+  </svg>
+
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand" aria-label="Navaja Barber Club, inicio">
+        <svg class="icon brand-icon"><use href="#i-razor"/></svg>
+        <span>Navaja <em>Barber Club</em></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#horario">Horario</a>
+        <a href="#reservar" class="btn btn-gold btn-sm">Reservar</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <svg class="icon icon-open"><use href="#i-menu"/></svg>
+        <svg class="icon icon-close"><use href="#i-close"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Portada -->
+    <section class="hero" id="inicio">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="kicker reveal">Barbería clásica · desde 2014</p>
+          <h1 class="reveal">Cortes con <span class="gold">carácter.</span></h1>
+          <p class="hero-sub reveal">
+            Técnica de barbería tradicional, estilos actuales y un espacio pensado para que salgas sintiéndote mejor que como entraste.
+          </p>
+          <div class="hero-actions reveal">
+            <a href="#reservar" class="btn btn-gold">
+              <svg class="icon"><use href="#i-calendar"/></svg> Reservar cita
+            </a>
+            <a href="#servicios" class="btn btn-outline">Ver servicios</a>
+          </div>
+          <p class="open-status reveal" id="openStatus" aria-live="polite">
+            <span class="dot"></span><span class="open-text">Consultando horario…</span>
+          </p>
+        </div>
+
+        <div class="hero-art reveal" aria-hidden="true">
+          <div class="pole"><div class="pole-stripes"></div></div>
+          <div class="hero-badge">
+            <span class="badge-num">10+</span>
+            <span class="badge-txt">años de oficio</span>
+          </div>
+          <div class="hero-card">
+            <svg class="icon"><use href="#i-star"/></svg>
+            <div><strong>4.9</strong><span>valoración media</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="section" id="servicios">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker">Servicios</p>
+          <h2>Precios claros, sin sorpresas</h2>
+        </header>
+        <!-- Se genera desde js/data.js -->
+        <div class="services" id="servicesList"></div>
+      </div>
+    </section>
+
+    <!-- Por qué nosotros -->
+    <section class="section section-dark">
+      <div class="container features">
+        <article class="feature reveal">
+          <svg class="icon"><use href="#i-shield"/></svg>
+          <h3>Higiene impecable</h3>
+          <p>Navajas desechables y herramientas esterilizadas en cada servicio.</p>
+        </article>
+        <article class="feature reveal">
+          <svg class="icon"><use href="#i-clock"/></svg>
+          <h3>Puntualidad</h3>
+          <p>Con reserva, te atendemos a tu hora. Sin esperas largas.</p>
+        </article>
+        <article class="feature reveal">
+          <svg class="icon"><use href="#i-coffee"/></svg>
+          <h3>Buen ambiente</h3>
+          <p>Café de cortesía, buena música y conversación si la quieres.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Equipo -->
+    <section class="section" id="equipo">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker">Equipo</p>
+          <h2>Manos con experiencia</h2>
+        </header>
+        <div class="team" id="teamList"></div>
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="section section-dark">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="kicker">Clientes</p>
+          <h2>Lo que dicen de nosotros</h2>
+        </header>
+        <div class="reviews" id="reviewsList"></div>
+        <p class="note">Testimonios de ejemplo para esta demo.</p>
+      </div>
+    </section>
+
+    <!-- Horario -->
+    <section class="section" id="horario">
+      <div class="container schedule">
+        <div class="reveal">
+          <header class="section-head">
+            <p class="kicker">Horario</p>
+            <h2>Cuándo encontrarnos</h2>
+          </header>
+          <table class="hours" id="hoursTable">
+            <caption class="sr-only">Horario de atención</caption>
+            <tbody></tbody>
+          </table>
+        </div>
+        <aside class="location reveal">
+          <svg class="icon"><use href="#i-pin"/></svg>
+          <h3>Ubicación</h3>
+          <p>Av. Principal, Local 12<br>Ciudad de ejemplo</p>
+          <p class="note">Dirección ficticia para esta demo.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Reserva -->
+    <section class="section section-dark" id="reservar">
+      <div class="container booking">
+        <header class="section-head reveal">
+          <p class="kicker">Reservas</p>
+          <h2>Aparta tu silla</h2>
+          <p>Elige servicio, barbero y hora. Solo te mostramos horas disponibles.</p>
+        </header>
+
+        <form class="form reveal" id="bookingForm" novalidate>
+          <div class="field">
+            <label for="name">Nombre</label>
+            <input id="name" name="name" type="text" autocomplete="name" required minlength="2" placeholder="Tu nombre">
+            <p class="error" data-for="name"></p>
+          </div>
+          <div class="field">
+            <label for="phone">Teléfono</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="0412-000-0000">
+            <p class="error" data-for="phone"></p>
+          </div>
+          <div class="field">
+            <label for="service">Servicio</label>
+            <select id="service" name="service" required></select>
+            <p class="error" data-for="service"></p>
+          </div>
+          <div class="field">
+            <label for="barber">Barbero</label>
+            <select id="barber" name="barber"></select>
+          </div>
+          <div class="field">
+            <label for="date">Fecha</label>
+            <input id="date" name="date" type="date" required>
+            <p class="error" data-for="date"></p>
+          </div>
+          <div class="field">
+            <label for="time">Hora</label>
+            <select id="time" name="time" required disabled>
+              <option value="">Primero elige una fecha</option>
+            </select>
+            <p class="error" data-for="time"></p>
+          </div>
+
+          <div class="summary" id="summary" aria-live="polite">
+            <span>Total estimado</span>
+            <strong id="summaryTotal">—</strong>
+          </div>
+
+          <button class="btn btn-gold btn-block" type="submit">
+            <svg class="icon"><use href="#i-check"/></svg> Confirmar reserva
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="brand"><svg class="icon brand-icon"><use href="#i-razor"/></svg><span>Navaja <em>Barber Club</em></span></p>
+      <p>Negocio ficticio creado como proyecto de portafolio por
+        <a href="https://alezzz18.github.io" target="_blank" rel="noopener">Alejandro Gutiérrez</a>.</p>
+    </div>
+  </footer>
+
+  <!-- Confirmación de reserva -->
+  <dialog class="modal" id="confirmModal" aria-labelledby="modalTitle">
+    <svg class="icon modal-icon"><use href="#i-check"/></svg>
+    <h3 id="modalTitle">¡Reserva lista!</h3>
+    <p id="modalText"></p>
+    <p class="note">Esto es una demo: no se envió ningún dato. En un sitio real, la reserva llegaría al negocio por WhatsApp o a un sistema de citas.</p>
+    <form method="dialog"><button class="btn btn-gold btn-block">Entendido</button></form>
+  </dialog>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
